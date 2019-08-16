@@ -18,17 +18,22 @@
 }
 
 /* menu bar */
-#logo {
+/* #logo {
     border: 1.5px solid rgb(117, 116, 116);
     
     width:37px;
 }
 #logo > a {
     /* font-family: 'Saira Stencil One', cursive; */
-    font-family: 'Blinker', sans-serif;
+    /* font-family: 'Blinker', sans-serif;
     font-size: .7em;
     font-weight: 600;
     
+} */ 
+
+#logo >img{
+  width:40px;
+  height:55px;
 }
 
 #playlists {
@@ -90,7 +95,7 @@
 }
  
 #home-right-content p span {
-  color:rgb(60, 134, 60);
+  color:rgb(90, 185, 90);
 }
   
   /* Media query */
