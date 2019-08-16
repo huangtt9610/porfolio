@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+  }
+
+.no-overflow {
+    overflow:hidden;
+}
+.sticky-header {
+    height: 93px;
+    position:fixed;
+    top:0;
+    padding-bottom: 55px;
+    /* background-color:#21f1f3; */
+    width:80%;
+    z-index:20;
+  
+}
+
+/* menu bar */
+#logo {
+    border: 1.5px solid rgb(117, 116, 116);
+    
+    width:37px;
+}
+#logo > a {
+    /* font-family: 'Saira Stencil One', cursive; */
+    font-family: 'Blinker', sans-serif;
+    font-size: .7em;
+    font-weight: 400;
+    
+}
+
+#playlists {
+    
+}
+#playlists p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    color: rgb(58, 57, 57);
+ 
+}
+
+#mynav {
+  
+}
+
+/* Home content */
+.homeContent {
+  margin-top:90px;
+} 
+
+#office-photo{
+  float: left;
+}
+#office-photo > img {
+ max-height: 550px;
+ /* max-width: 510px; */
+  
+  
+}
+
+#home-right-content  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size:55px;
+}
+
+
+
+
+ 
+  
+  /* Media query */
+
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  } 
+
+  @media screen and (max-width:770px) {
+    .no-overflow {
+      overflow:auto;
+    }
+
+    #office-photo {
+      height: auto;
+      width: 90%;  
+       
+       
+     }
+     #office-photo >img {
+       width: 100%;
+       height: auto;
+     }
+  }
+
