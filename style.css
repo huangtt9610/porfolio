@@ -18,21 +18,21 @@
 }
 
 /* menu bar */
-/* #logo {
+ /* #logo {
     border: 1.5px solid rgb(117, 116, 116);
     
     width:37px;
 }
 #logo > a {
-    /* font-family: 'Saira Stencil One', cursive; */
-    /* font-family: 'Blinker', sans-serif;
+    
+     font-family: 'Blinker', sans-serif;
     font-size: .7em;
     font-weight: 600;
     
-} */ 
+}  */
 
 #logo >img{
-  width:40px;
+  width:37px;
   height:55px;
 }
 
