@@ -27,9 +27,19 @@
 
 <body class="no-overflow">
     <div class="wrapper  mx-auto px-2" style=" max-width: 1220px ">
+            
         <!-- Menu Bar-->
         <div>
-                <nav class="navbar navbar-expand-lg navbar-light sticky-header" >
+                
+                <nav class="navbar navbar-expand-lg navbar-light sticky-header" id="menu">
+                        
+                        <!-- <button type="button" id="sidebarCollapse" class="navbar-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                        </button> -->
+
+
                     <div id="logo" >
                         <a class="navbar-brand px-1 py-1" href="#"> &nbsp;T&emsp;I<br class="mb-1">&nbsp;N&nbsp;&nbsp;&nbsp;&nbsp;G</a>    
                         <!-- <img src="https://github.com/huangtt9610/logos/blob/master/logo.PNG?raw=true" alt="logo" class="navbar-brand py-1" href="#"> -->
@@ -39,15 +49,40 @@
                             <p class="pt-4" style="letter-spacing: 27px;"> PLAYLISTS</p>
                         </div>
 
-                        <div id="myNav" class = " ml-5 d-block pr-1">
-                            <span style="font-size:20px; cursor:pointer" onclick="openNav()"> &#9776;</span>
+                       
+                        
+                        <div id="myNav" class="overlay">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <div class="overlay-content">
+                                <a href="#">About</a>
+                                <a href="#">Services</a>
+                                <a href="#">Clients</a>
+                                <a href="#">Contact</a>
+                            </div>
                         </div>
+
+                        
+                        <!-- <div id="myNav" class = " ml-5 d-block pr-1">
+                            <span style="font-size:20px; cursor:pointer" onclick="openNav()"> &#9776;</span>
+                        </div> -->
+
+                       
+                            <button type="button" id="sidebarCollapse" class="navbar-btn" onclick="openNav()">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                            </button>
+                        
+                        
+
+                    
                    
                 <!-- <div class="ml-auto d-inline">
 
                     <p id = "playlists" class = "d-none d-xl-block pt-4" style="letter-spacing: 27px;">PLAYLISTS</p>
                     <span id="myNav" class = " ml-5 d-block pr-1" style="font-size:20px; cursor:pointer" onclick="openNav()"> &#9776;</span>
                 </div> -->
+               
                   
                 </nav>
         </div>
@@ -90,27 +125,29 @@
 
             </div>
         </div>
+
+        
+        
     </div>
 
-    <!-- <div id="mynavContent" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Clients</a>
-              <a href="#">Contact</a>
-            </div>
-    </div> -->
-
     <script>
-            function openNav() {
-              document.getElementById("myNav").style.height = "100%";
-            }
+        /* Open */
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+            document.getElementById("menu").style.backgroundColor ="white";
             
-            function closeNav() {
-              document.getElementById("myNav").style.height = "0%";
-            }
+        }
+
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+            document.getElementById("menu").style.backgroundColor ="rgb(255, 255, 255, 0.3)";
+        } 
+
+    
     </script>
+
+
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -119,5 +156,13 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#myNav').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
 </body>
 </html>
